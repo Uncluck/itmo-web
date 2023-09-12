@@ -1,0 +1,125 @@
+body {
+    width: auto;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+.fixed-nav-bar {
+    position: sticky;
+    z-index: 9999;
+}
+
+.page-header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100px 1fr 150px 100px;
+    width: 100%;
+    background-color: #525252;
+}
+
+.page-header:nth-child(2) {
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+}
+.main-nav {
+    display: contents;
+    width: auto;
+    margin: 0 auto;
+    padding: 20px 55px;
+}
+
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-width: 990px;
+}
+
+.site-navigation-item:last-child {
+    margin-right: 0;
+}
+
+.site-navigation-item a {
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.site-navigation-item a:hover {
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #975599;
+}
+
+.site-navigation-item a:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #975599;
+}
+
+.header-menu {
+    width: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 350px));
+    grid-gap: 20px;
+    justify-content: center;
+}
+.card {
+    display: grid;
+    gap: 1em;
+    position: relative;
+    width: 1fr;
+    padding: 1em 2em;
+    border: 1px solid #975599;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #f5f5f5;
+    margin: 0;
+    width: 100%;
+}
+
+.footer-logo-name {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 70px 1fr 200px 100px;
+}
+
+.footer-h {
+    padding-left: 15px;
+}
+
+.footer-logo {
+    float: left;
+    left: 50px;
+    margin-right: 30px;
+    width: 60px;
+}
+
+.footer-nav {
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 40px;
+    width: 100%;
+}
