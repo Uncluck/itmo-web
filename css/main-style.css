@@ -1,6 +1,7 @@
 body {
     width: auto;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Roboto, sans-serif;
+    font-style: normal;
     margin: 0;
     padding: 0;
 }
@@ -109,6 +110,7 @@ h1, h2, h3, h4 {
     padding: 1em 2em;
     border: 1px solid #975599;
     border-radius: 10px;
+    box-shadow: 10px -6px black;
 }
 
 .div-img {
@@ -136,7 +138,7 @@ h1, h2, h3, h4 {
     padding: 0;
     margin: 0;
     text-align: center;
-    font-weight: 750;
+    font-weight: 700;
 }
 
 .card-description {
@@ -150,8 +152,8 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 1.2em;
+    line-height: 1.4em;
 }
 
 .card-price-value {
@@ -217,4 +219,52 @@ footer {
         display: none;
 
     }
+}
+
+table {
+    border: 1px solid #000000;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+thead,
+tbody,
+tr{
+    display: contents;
+    border-left: 1px solid #000000;
+}
+
+table td {
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+
+tr:nth-child(2n) > td {
+    background-color: blueviolet;
+}
+
+
+@media screen and (max-width: 1000px) {
+    table{
+        width: 1000px;
+    }
+
+    tr > th:nth-child(3) {
+        display: none;
+    }
+
+    tr > td:nth-child(3) {
+        display: none;
+    }
+    table {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.text {
+    text-indent: 10em;
+    word-spacing: 1rem;
 }
