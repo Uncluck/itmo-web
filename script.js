@@ -1,20 +1,26 @@
-let before_load_time = new Date().getTime();
-window.onload = page_load_time;
+(() => {
+    let before_load_time = new Date().getTime();
+    window.onload = () => {
+        const item = document.getElementById("load")
+        item.innerText = "Page load time is" + (new Date().getTime() - before_load_time) + "ms"
+        console.log(item.innerText);
+    }
+})();
 
-function page_load_time() {
-    const item = document.getElementById("load")
-    item.innerText = "Page load time is" + (new Date().getTime() - before_load_time) + "ms"
-    console.log(item.innerText);
-}
-
-const path = document.location
-const car = document.getElementById('car')
-
-if (path === "car.html") {
-    car.style.backgroundColor = 'black'
-    car.style.border = '1px solid blue'
-}
-
-if (path === "jeep.html") {
-    car.style.backgroundColor = 'black'
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const path = document.location.href
+    console.log(path);
+    const car = document.getElementById('car')
+    const bike = document.getElementById('bike')
+    const scooter = document.getElementById('scooter')
+    if ((path.includes('sedan.html')) || (path.includes('jeep.html'))){
+        car.classList.add('active')
+        bike.classList.remove('active')
+        scooter.classList.remove('active')
+    }
+    if (path.includes('sport-bike.html')){
+        car.classList.remove('active')
+        bike.classList.add('active')
+        scooter.classList.remove('active')
+    }
+})
