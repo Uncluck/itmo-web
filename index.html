@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="css/main-style.css" rel="stylesheet">
@@ -22,7 +23,29 @@
                 <a href="#">Главная</a>
             </li>
             <li class="site-navigation-item">
-                <a href="#">Транспорт</a>
+                <a href="">Транспорт</a>
+                <ul class="submenu">
+                    <li><a href="#Cars">Автомобили</a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="sedan.html">Седан</a></li>
+                            <li class="submenu-item"><a href="">Хэтчбек</a></li>
+                            <li class="submenu-item"><a href="">Кроссовер</a></li>
+                            <li class="submenu-item"><a href="jeep.html">Джип</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Bikes" id="bike">Велосипеды</a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="sport-bike.html">Спортивные</a></li>
+                            <li class="submenu-item"><a href="#">Городские</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" id="scooter">Самокаты</a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="">Электро-Самокаты</a></li>
+                            <li class="submenu-item"><a href="">Самокаты</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </li>
             <li class="site-navigation-item">
                 <a href="#">Условия аренды</a>
@@ -47,61 +70,16 @@
     </div>
 </header>
 <main>
-    <p class="text">Свойство font — сокращенный способ задать несколько свойств шрифта: font-style,
-        font-variant, font-weight, font-size, line-height и/или font-family
-        (тип шрифта, как отобразить первую букву, жирность, размер, высоту строки, имя шрифта).
-    </p>
-    <table>
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Birthday</th>
-                <th>Points</th>
-                <th>Amount</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Gloria</td>
-                <td>Reeves</td>
-                <td>10/18/1985</td>
-                <td>4</td>
-                <td>$50</td>
-            </tr>
-            <tr>
-                <td>Gloria</td>
-                <td>Reeves</td>
-                <td>10/18/1985</td>
-                <td>4</td>
-                <td>$50</td>
-            </tr>
-            <tr>
-                <td>Gloria</td>
-                <td>Reeves</td>
-                <td>10/18/1985</td>
-                <td>4</td>
-                <td>$50</td>
-            </tr>
-            <tr>
-                <td>Gloria</td>
-                <td>Reeves</td>
-                <td>10/18/1985</td>
-                <td>4</td>
-                <td>$50</td>
-            </tr>
-        </tbody>
-    </table>
     <p class="scroll-to-start">
         <a href="#Top">
-            <img src="#" alt="scroll">
+            <img src="./img/scroll-up.png" alt="scroll">
         </a>
     </p>
     <div>
         <h1>Прокат</h1>
-        <img class="main-img" src="https://static.baza.farpost.ru/v/1643244919540_bulletin" alt="photo" width="75%">
+        <!--<img class="main-img" src="https://static.baza.farpost.ru/v/1643244919540_bulletin" alt="photo" width="75%">-->
     </div>
-    <section class="services">
+    <section class="services" id="Cars">
         <h2>Аренда Автомобилей</h2>
         <section class="cards">
             <div class="card">
@@ -170,7 +148,7 @@
             </div>
         </section>
         <h2>Аренда Велосипедов</h2>
-        <section class="cards">
+        <section class="cards" id="Bikes">
             <div class="card">
                 <div class="div-img">
                     <img class="card-img" src="https://static.vecteezy.com/system/resources/previews/000/489/835/original/road-bike-with-gear-shifting-black-silhouette-vector-illustration.jpg">
@@ -205,7 +183,7 @@
             </div>
         </section>
         <h2>Аренда Самокатов</h2>
-        <section class="cards">
+        <section class="cards" id="Scooters">
             <div class="card">
                 <div class="div-img">
                     <img class="card-img" src="https://oregonbikelaw.com/wp-content/uploads/2019/06/E-Scooter-Cover_Page_1.png">
@@ -245,7 +223,6 @@
     </section>
 </main>
 <footer>
-    <img class="footer-img" src="https://img.freepik.com/free-vector/flat-horizontal-sale-banner-template-with-photo_23-2149000923.jpg?w=1380&t=st=1695710650~exp=1695711250~hmac=9efd746d1ffc27e8b92f6ceeb40e55eeb568bd3258cea37049cf7021dccd3476" alt="">
     <div class="footer-logo-name">
         <div class="footer-logo">
             <a href="#Top">
@@ -258,7 +235,7 @@
                 <strong>+7 (921) 000 00 00</strong>
             </a>
         </div>
-        <div class="social-media">
+        <div class="social-media" id="load">
             <div class="footer-logo">
                 <a href="#Top">
                     <img src="./img/car-rent.png" alt="logo" width="100%">
