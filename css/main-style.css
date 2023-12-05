@@ -290,3 +290,50 @@ footer {
 .footer-img {
     width: 100%;
 }
+
+.task-li {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 500px;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+}
+
+.task-li:first-child,
+.task-li:last-child{
+    margin-bottom: 0;
+}
+.task-li:nth-child(2) {
+    margin-top: 20px;
+}
+
+
+.task-ul {
+    background-color: #d1d1d1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-div-input {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    border-bottom: 2px solid #000000;
+}
+
+.task-div-input > label > input {
+    height: 30px;
+    border: 1px solid #297c14;
+    background-color: #d1d1d1;
+}
+
+.task-button {
+    background-color: #d1d1d1;
+    height: 20px;
+    width: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
