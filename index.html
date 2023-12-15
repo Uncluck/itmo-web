@@ -221,7 +221,13 @@
     </section>
     <section class="reviews">
         <h2>Отзывы клиентов</h2>
-
+        <template>
+            <div class="div-review">
+                <div class="div-review-name">Name: {{ item.name }}</div>
+                <div class="div-review-email">Email: {{ item.email }}</div>
+                <div class="div-review-body">Body: {{ item.body }}</div>
+            </div>
+        </template>
     </section>
 </main>
 <footer>

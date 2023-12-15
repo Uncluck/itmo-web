@@ -6,51 +6,51 @@ formWork.onsubmit = (event) => {
     // теперь можно извлечь данные
     const name = formData.get('name');
     const work = formData.get('work-experience');
-    let object = {
-        name: `${name}`,
-        work: `${work}`
+    let object = { name, work };
+    arr.push(object);
+    localStorage.setItem('items', JSON.stringify(arr));
+    formWork.reset();
+    if ("content" in document.createElement("template")) {
+        const template = document.getElementById('task-template');
+        let li = template.content.cloneNode(true);
+        console.log(li);
+        li.querySelector('p').innerText = `${name} работал ${work}`;
+        createButton(li.querySelector('input'), li);
+        document.querySelector('.task-ul').appendChild(li);
     }
-    arr.push(object)
-    localStorage.setItem('items', JSON.stringify(arr))
-    let getInputName = document.getElementById('name')
-    getInputName.value = ''
-    let getInputWork = document.getElementById('work')
-    getInputWork.value = ''
-    let li = document.querySelector('.task-ul').appendChild(document.createElement('li'))
-    li.classList.add('task-li')
-    let liInput = li.appendChild(document.createElement('input'))
-    liInput.setAttribute('type','checkbox')
-    let p = li.appendChild(document.createElement('p'))
-    p.innerText = `${name} работал ${work}`
-    createButton(liInput, li)
 }
 
 window.addEventListener('load', () => {
-    const data = JSON.parse(localStorage.getItem('items'))
+    const data = JSON.parse(localStorage.getItem('items'));
     console.log(data);
     for(let i=0; i < data.length; i++) {
-        let li = document.querySelector('.task-ul').appendChild(document.createElement('li'))
-        li.classList.add('task-li')
-        let liInput = li.appendChild(document.createElement('input'))
-        liInput.setAttribute('type','checkbox')
-        let p = li.appendChild(document.createElement('p'))
-        p.innerText = `${data[i].name} работал ${data[i].work}`
-        createButton(liInput, li)
+        if ("content" in document.createElement("template")) {
+            const template = document.getElementById('task-template');
+            let li = template.content.cloneNode(true);
+            li.querySelector('p').innerText = `${data[i].name} работал ${data[i].work}`;
+            createButton(li.querySelector('input'), li);
+            document.querySelector('.task-ul').appendChild(li);
+        }
     }
 })
 
 let createButton = (liInput, li) => {
     liInput.addEventListener('click', () => {
         if(liInput.checked) {
-            let liInputButton = li.appendChild(document.createElement('button'))
-            liInputButton.classList.add('task-button')
-            liInputButton.innerText = 'Убрать'
-            liInputButton.addEventListener('click', () => {
-                li.remove()
-            })
+            if ("content" in document.createElement("template")) {
+                const template = document.getElementById('button-task');
+                let tem = template.content.cloneNode(true);
+                const button = tem.querySelector('.task-button');
+                console.log(button);
+                button.classList.remove('hidden');
+                document.querySelector('.task-button').appendChild(template);
+                button.addEventListener('click', () => {
+                    li.remove();
+                })
+            }
         } else {
-            let button = li.querySelector('.task-li > .task-button')
-            button.remove()
+            let button = li.querySelector('.task-li > .task-button');
+            button.remove();
         }
     })
 }
