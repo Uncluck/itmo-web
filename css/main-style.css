@@ -348,12 +348,26 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
-    border: 1px solid #d1d1d1;
+    padding: 50px;
     width: 500px;
-    height: 100px;
+    height: 200px;
 }
 
 .hidden {
     display: none;
+}
+
+.swiper-container {
+    width: 600px;
+    height: 100px;
+}
+
+.bold-span {
+    font-weight: bold;
+
+}
+
+.swiper {
+    width: 600px;
+    height: 300px;
 }

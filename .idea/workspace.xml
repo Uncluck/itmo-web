@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27b9add6-60ac-488f-bda3-f7f2d986617e" name="Changes" comment="lab 6">
+    <list default="true" id="27b9add6-60ac-488f-bda3-f7f2d986617e" name="Changes" comment="fixed lab 6">
+      <change beforePath="$PROJECT_DIR$/.idea/itmo-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/itmo-web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/jsTask.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reviews.js" beforeDir="false" afterPath="$PROJECT_DIR$/reviews.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/task.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

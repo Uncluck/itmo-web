@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <script src="script.js"></script>
-    <script src="reviews.js"></script>
+    <script type="module" src="reviews.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="css/main-style.css" rel="stylesheet">
-    <meta name="keywords" content="аренда, машины, самокаты">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    <meta name="keywords" content="аренда, машины, самокаты">
     <meta name="description" content="Аренда любого транспорта в СПБ">
     <title>Прокат</title>
 </head>
@@ -221,11 +225,24 @@
     </section>
     <section class="reviews">
         <h2>Отзывы клиентов</h2>
-        <template>
-            <div class="div-review">
-                <div class="div-review-name">Name: {{ item.name }}</div>
-                <div class="div-review-email">Email: {{ item.email }}</div>
-                <div class="div-review-body">Body: {{ item.body }}</div>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <template id="review-template">
+            <div class="swiper-slide">
+                <div class="div-review">
+                    <div class="div-review-name"></div>
+                    <div class="div-review-email"></div>
+                    <div class="div-review-body"></div>
+                </div>
             </div>
         </template>
     </section>
